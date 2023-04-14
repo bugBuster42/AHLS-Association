@@ -22,11 +22,9 @@
     --third-color: #AB9661;
     --dark-color: rgb(23, 24, 21);
     --light-color: rgb(255, 255, 255);
-
 }
 
 :root {
-
     --title-font: 'Raleway';
     --text-font: 'Open Sans';
     --third-font: 'Poppins';

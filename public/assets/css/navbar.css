@@ -17,7 +17,7 @@ nav {
 }
 
 .ahls a {
-    font-size: 2rem;
+    font-size: var(--font-size2);
     font-weight: bold;
     color: var(--third-color);
 }
