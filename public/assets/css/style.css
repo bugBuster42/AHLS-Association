@@ -17,7 +17,7 @@
 :root:not([data-theme="dark"]) {
     --primary-color: rgb(68, 75, 60);
     --secondary-color: rgb(135, 131, 131);
-    --third-color: #ab9661;
+    --third-color: rgb(171, 150, 97);
     --dark-color: rgb(23, 24, 21);
     --light-color: rgb(213, 219, 206);
 }
