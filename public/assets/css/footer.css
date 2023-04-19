@@ -15,7 +15,7 @@ footer > .coordinate > .title {
     font-family: var(--third-font);
     font-size: calc(var(--font-size) * 3);
 }
-footer li.email {
+footer li.email a {
     color: var(--third-color);
 }
 footer li.adress {
@@ -39,4 +39,9 @@ footer img {
     background-color: var(--third-color);
     width: 100%;
     padding: 3px 3px;
+}
+.legal_notice li a {
+    color: var(--light-color);
+    display: flex;
+    flex-direction: column;
 }
