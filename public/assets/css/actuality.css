@@ -70,7 +70,7 @@ h2 {
 h3 {
     font-family: var(--text-font);
     font-weight: lighter;
-    text-decoration: none;
+    text-decoration: underline;
     font-size: clamp(1.1rem, 0.8rem + 1.3333vw, 1.8rem);
 }
 
@@ -98,6 +98,12 @@ p {
     padding: 1rem;
     margin-block: calc(var(--spacing) * 0.9);
     flex-direction: column;
+    transition-duration: 150ms;
+}
+
+.article:hover {
+    background-color: #e6e6e6;
+    text-decoration: none;
 }
 
 .article p {
@@ -106,6 +112,10 @@ p {
 
 .article p:nth-child(3) {
     color: var(--dark-color);
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
 }
 
 .show_more {
