@@ -4,7 +4,7 @@ nav {
     --nav-element-spacing-vertical: var(--spacing);
     padding-inline: var(--spacing2);
     border-bottom: 1px solid var(--primary-color);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.450);
+    box-shadow: 0 0 10px 0 var(--shadow-color);
 }
 
 .nav-right a {
