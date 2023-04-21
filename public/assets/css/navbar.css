@@ -1,8 +1,8 @@
 nav {
     background-color: var(--light-color);
-    --nav-element-spacing-horizontal: var(--spacing1);
-    --nav-element-spacing-vertical: var(--spacing);
-    padding-inline: var(--spacing2);
+    --nav-element-spacing-horizontal: var(--spacing-s);
+    --nav-element-spacing-vertical: calc(var(--spacing-s)/2);
+    padding-inline: var(--spacing);
     border-bottom: 1px solid var(--primary-color);
     box-shadow: 0 0 10px 0 var(--shadow-color);
 }
@@ -21,14 +21,15 @@ nav {
 .ahls a {
     font-size: calc(var(--font-size2)*1.5);
     font-family: var(--title-font);
+    font-weight: bold;
     color: var(--primary-color);
     padding: 0;
 }
 
 .menu {
     position: absolute;
-    right: var(--spacing1);
-    top: var(--spacing3);
+    right: var(--spacing-s);
+    top: calc(var(--spacing-s)*3);
     visibility: hidden;
 }
 
@@ -53,13 +54,13 @@ nav {
     }
 
     nav ul li a img {
-        margin-left: var(--spacing1);
+        margin-left: var(--spacing-s);
     }
 
     #nav-right {
         display: none;
         padding-left: 0;
-        padding-right: var(--spacing1);
+        padding-right: var(--spacing-s);
     }
 
     #nav-right:target {
