@@ -20,23 +20,6 @@
 				{% endfor %}
 				<a class="show_more" href="">Consulter la rubrique actualités ➔</a>
 			</article>
-			<article>
-				<div class="magazine">
-					<h2>L'INDIEN</h2>
-					<img src="assets/images/vector.png" class="decoration">
-					{% for copy in magazine %}
-						<a href="">
-							<div class="cover">
-								<img src="/assets/images/l-indien-mars-23.webp" {{ copy.cover }}>
-							</div>
-							<p class="number">{{ copy.number }}
-								<b>Lire la suite</b>
-							</p>
-							</div>
-						</a>
-					{% endfor %}
-					<a class="show_more" href="">Consulter les anciens numéros ➔</a>
-				</article>
-			</section>
+		</section>
 
-		{% endblock %}
+	{% endblock %}

@@ -55,6 +55,8 @@ article {
 }
 
 .feed {
+    display: flex;
+    flex-direction: column;
     margin-block-start: 0;
     padding: 0;
     max-height: 100%;
@@ -78,11 +80,6 @@ h3 {
 
 p {
     font-family: var(--text-font);
-}
-
-.feed {
-    display: flex;
-    flex-direction: column;
 }
 
 .decoration {
@@ -125,26 +122,6 @@ a:-webkit-any-link {
     margin-block-start: calc(var(--spacing) * 0.2);
     justify-content: center;
     width: 100%;
-}
-
-.cover {
-    display: flex;
-    justify-content: center;
-
-}
-
-.cover img {
-    height: 80vh;
-    padding-block: var(--spacing);
-}
-
-.number {
-    display: block;
-    text-align: center;
-}
-
-.magazine {
-    height: 100%;
 }
 
 @media screen and (max-width: 800px) {
