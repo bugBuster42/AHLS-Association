@@ -33,6 +33,12 @@ CREATE TABLE `actuality` (
   `content` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE `magazine` (
+  `id` int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `cover` varchar(255) NOT NULL,
+  `number` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Contenu de la table `item`
 --
@@ -41,6 +47,9 @@ INSERT INTO `actuality` (`date`, `title`, `content`) VALUES
 ('2023-04-18 06:00', 'Des diplômés de licence et de master célébrés à l’université', 'Cent quatre-vingts lauréats, de la licence au doctorat, ont reçu leur diplôme à la faculté de droit économie gestion de l’université d’Orléans. Sandra Rimbert, enseignant...'),
 ('2023-04-17 06:00', 'Une élue européenne en visite', 'Salima Yenbou est allée à la rencontre des élèves du lycée Voltaire pour faire mieux connaître le Parlement européen et le rôle de l’Europe. - Salima Yenbou, députée européenne (...'),
 ('2023-04-17 06:00', 'Des écoliers préparent une pièce sur Jeanne d’Arc', 'Les élèves de CM1 et CM2 de l’école privée du cours Henri-Guillaumet (membre du réseau Espérance banlieue) répètent une pièce de théâtre sur Jeanne d’Arc, qui sera présent...');
+
+INSERT INTO `magazine` (`cover`, `number`) VALUES
+('l-indien-mars-23.png', 'n°137');
 
 --
 -- Index pour les tables exportées

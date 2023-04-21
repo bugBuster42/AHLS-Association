@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\ActualityManager;
+use App\Model\MagazineManager;
 
 class HomeController extends AbstractController
 {
@@ -14,6 +15,9 @@ class HomeController extends AbstractController
         $actualityManager = new ActualityManager();
         $article = $actualityManager->selectAll('date', 'DESC');
 
-        return $this->twig->render('Home/index.html.twig', ['actuality' => $article]);
+        $magazineManager = new MagazineManager();
+        $copy = $magazineManager->selectAll('number', 'DESC');
+
+        return $this->twig->render('Home/index.html.twig', ['actuality' => $article, 'magazine' => $copy]);
     }
 }
