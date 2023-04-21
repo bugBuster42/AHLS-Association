@@ -7,5 +7,5 @@ db.php
 .idea
 .vscode
 ahls.db
-.tours
+/.tours/
 $myConnection.session.sql
