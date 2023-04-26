@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheet %}
-    <link rel="stylesheet" href="/assets/css/newspaper.css">
+    <link rel="stylesheet" href="/assets/css/newspaper/newspaper.css">
 {% endblock %}
 {% block content %}
     <main>
@@ -20,5 +20,10 @@
                 </article>
             {% endfor %}
         </div>
+        {% block archive %}
+            {% include 'Newspaper/archive.html.twig' %}
+        {% endblock %}
     </main>
 {% endblock %}
+
+
