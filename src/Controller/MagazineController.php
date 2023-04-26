@@ -4,11 +4,8 @@ namespace App\Controller;
 
 use App\Model\MagazineManager;
 
-class HomeController extends AbstractController
+class MagazineController extends AbstractController
 {
-    /**
-     * Display home page
-     */
     public function index(): string
     {
         $magazineManager = new MagazineManager();

@@ -5,9 +5,9 @@ namespace App\Model;
 use App\Model\AbstractManager;
 use PDO;
 
-class ActualityManager extends AbstractManager
+class MagazineManager extends AbstractManager
 {
-    public const TABLE = 'actuality';
+    public const TABLE = 'magazine';
 
     public function __construct()
     {
