@@ -207,3 +207,20 @@ VALUES (137, 'Mars 2023'),
   (003, 'Mois Année'),
   (002, 'Mois Année'),
   (001, 'Mois Année');
+
+  CREATE TABLE `partner` (
+   `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   `name` VARCHAR(255) NOT NULL,
+   `address` VARCHAR(255) NOT NULL,
+   `url` VARCHAR(255) NOT NULL,
+   `image` VARCHAR(255) NOT NULL
+   );
+
+INSERT INTO partner (name, address, url, image) VALUES
+  ('Antonio Meira', '447 Rue Marcel Belot - 45160 Olivet', 'http://www.am-motorbike.fr/', 'meira.jpg'),
+  ('La Racinerie', 'Rue Haute - Saint-Cyr-En-Val', 'https://www.bienvenue-a-la-ferme.com/centre/loiret/st-cyr-en-val/ferme/la-racinerie/233194', 'racinerie.jpg'),
+  ('U Express', '24 Avenue de la Bolière - 45100 Orléans', 'https://www.magasins-u.com/magasin/uexpress-orleanslasource', 'uexpress.jpg'), 
+  ('Boulangerie de la Bolière', '24 Avenue de la Bolière - 45100 Orléans', 'https://www.myboulange.fr/45/orleans/boulangerie-de-la-boliere-64299', 'boulangerie.jpg'), 
+  ('Cordonnerie Chauss Clefs', '10 Avenue du Président John Kennedy - 45100 Orléans', 'https://www.pagesjaunes.fr/pros/51562297', 'cordonnerie.jpg'), 
+  ('ACM Formation', '2bis Rue Alain - 45100 Orléans', 'https://acmformation.com/', 'ACM.jpg');
+  
