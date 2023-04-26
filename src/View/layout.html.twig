@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="fr" data-theme="light">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/assets/images/favicon.png">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="/assets/images/favicon.png">
 
     <title>{% block title %}AHLS{% endblock %}</title>
 
@@ -14,9 +14,16 @@
 </head>
 
 <body>
-    {% block content %}{% endblock %}
+    {% block navbar %}
+        {% include 'components/_navbar.html.twig' %}
+    {% endblock %}
+	{% block content %}{% endblock %}
+	{% block footer %}
+		{% include 'components/_footer.html.twig' %}
+	{% endblock %}
     {% block javascript %}{% endblock %}
 </body>
-</html>
+</html>		
 
-
+	
+	
