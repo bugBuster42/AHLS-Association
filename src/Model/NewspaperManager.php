@@ -11,7 +11,6 @@ class NewspaperManager extends AbstractManager
     public function indexLastByNumber(): array
     {
         $query = "SELECT cover, date, link, MAX(number) FROM " . static::TABLE;
-        
         return $this->pdo->query($query)->fetchAll();
     }
 }
