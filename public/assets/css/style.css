@@ -5,8 +5,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Raleway:wght@100&display=swap");
 
-[data-theme="“light”"],
-:root:not([data-theme="“dark”"]) {
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
     --primary-color: rgb(171, 150, 97);
     --secondary-color: rgb(255, 254, 245);
     --dark-color: rgb(23, 24, 21);
@@ -31,4 +31,9 @@
 
 ul {
     padding-inline-start: 0px;
+}
+
+.grid {
+    --breakpoint: calc(360px - var(--spacing) * 2);
+    grid-template-columns: repeat(auto-fit, minmax(var(--breakpoint), 1fr));
 }
