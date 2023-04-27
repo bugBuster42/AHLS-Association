@@ -220,6 +220,11 @@ VALUES (137, 'Mars 2023'),
   (002, 'Mois Année'),
   (001, 'Mois Année');
 
+UPDATE newspaper
+SET cover = 'cover137_placeholder.png',
+    link = 'https://ahls-indien.fr/Indien/Indien_137-Mars_2023.pdf'
+WHERE number = 137;
+
   CREATE TABLE `partner` (
    `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
    `name` VARCHAR(255) NOT NULL,

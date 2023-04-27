@@ -2,17 +2,17 @@
 
 namespace App\Controller;
 
-use App\Model\MagazineManager;
+use App\Model\NewspaperManager;
 use App\Model\PartnerManager;
 
 class HomeController extends AbstractController
 {
     public function index(): string
     {
-        $magazineManager = new MagazineManager();
-        $copy = $magazineManager->selectAll('month', 'DESC');
+        $newspaperManager = new NewspaperManager();
+        $newspapers = $newspaperManager->indexLastByNumber();
         $partnerManager = new PartnerManager();
         $partners = $partnerManager->selectAll();
-        return $this->twig->render('Home/index.html.twig', ['partners' => $partners, 'magazines' => $copy]);
+        return $this->twig->render('Home/index.html.twig', ['partners' => $partners, 'newspapers' => $newspapers,]);
     }
 }
