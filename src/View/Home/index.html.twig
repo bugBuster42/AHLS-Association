@@ -5,10 +5,31 @@
     <link rel="stylesheet" href="/assets/css/home/partner/partner.css">
 {% endblock %}
 {% block content %}
+    <header>
+        <h1>Association des Habitants d’Orléans La Source</h1>
+    </header>
+	<section>
+		<article>
+			<div class="feed">
+				<h2>DERNIÈRES ACTUALITÉS</h2>
+				<img src="assets/images/vector.png" class="decoration">
+				{% for article in actuality %}
+					<a href="">
+						<div class="article">
+							<h3>{{ article.title }}</h3>
+							<p class="article_date">{{ article.date }}</p>
+							<p>{{ article.content }}
+								<b>Lire la suite</b>
+							</p>
+						</div>
+					</a>
+				{% endfor %}
+				<a class="show_more" href="">Consulter la rubrique actualités ➔</a>
+			</article>
+		</section>
 	<header>
 		<h1>Association des Habitants d’Orléans La Source</h1>
 	</header>
-
 	<section class="partners">
 		<h1>Nos partenaires</h1>
         <ul>
