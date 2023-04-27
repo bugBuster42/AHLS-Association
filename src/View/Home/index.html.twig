@@ -1,7 +1,8 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheet %}
-    <link rel="stylesheet" href="/assets/css/home/header.css">
+	<link rel="stylesheet" href="/assets/css/home/header.css">
+    <link rel="stylesheet" href="/assets/css/home/partner/partner.css">
 {% endblock %}
 {% block content %}
     <header>
@@ -26,4 +27,16 @@
 				<a class="show_more" href="">Consulter la rubrique actualités ➔</a>
 			</article>
 		</section>
-	{% endblock %}
+	<header>
+		<h1>Association des Habitants d’Orléans La Source</h1>
+	</header>
+	<section class="partners">
+		<h1>Nos partenaires</h1>
+        <ul>
+		{% for partner in partners %}
+        <li><h2> {{partner.name}} </h2>
+			<img src="https://nzentrepreneur.co.nz/wp-content/uploads/2022/08/Partner-Logo-placeholder-300x157.png" alt="{{ partner.name }}">
+            </li>
+		{% endfor %}
+	</section>
+{% endblock %}
