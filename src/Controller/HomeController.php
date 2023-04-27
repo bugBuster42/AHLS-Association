@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Model\ActualityManager;
-use App\Model\MagazineManager;
 use App\Model\PartnerManager;
 
 class HomeController extends AbstractController
