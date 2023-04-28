@@ -31,7 +31,7 @@
     background-color: var(--secondary-color);
     padding-block-start: var(--spacing);
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1600px;
 }
 .container-fluid p {
     font-size: calc(var(--font-size) * 1.25);
