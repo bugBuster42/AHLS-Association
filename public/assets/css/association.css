@@ -1,6 +1,10 @@
 * {
     font-family: var(--text-font);
 }
+.grid {
+    --breakpoint: calc(360px - var(--spacing) * 2);
+    grid-template-columns: repeat(auto-fit, minmax(var(--breakpoint), 1fr));
+}
 
 .horizontalBar {
     width: clamp(150px, 25vw, 220px);
@@ -28,7 +32,7 @@
     background-color: var(--secondary-color);
     padding-block-start: var(--spacing);
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1600px;
 }
 .container-fluid p {
     font-size: calc(var(--font-size) * 1.25);
