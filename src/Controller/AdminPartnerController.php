@@ -12,7 +12,6 @@ class AdminPartnerController extends AbstractController
         $errors = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $partner = array_map('trim', $_POST);
-            
 
             if (empty($partner['name'])) {
                 $errors[] = "Veuillez entrer un nom";
@@ -31,10 +30,13 @@ class AdminPartnerController extends AbstractController
             if ((!in_array($extension, $authorizedExtensions))) {
                 $errors[] = 'Veuillez sélectionner une image de type Jpg, Jpeg, Webp ou Png !';
             }
-            if (file_exists($_FILES['imageUpload']['tmp_name']) && filesize($_FILES['imageUpload']['tmp_name']) > $maxFileSize) {
-                $errors[] = "Votre fichier doit faire moins de 2M !";
+            if (
+                file_exists($_FILES['imageUpload']['tmp_name'])
+                && filesize($_FILES['imageUpload']['tmp_name']) > $maxFileSize
+            ) {
+                $errors[] = "Votre fichier doit faire moins de " . $maxFileSize / 1000000 . "Mo.";
             }
-            
+
             if (empty($errors)) {
                 move_uploaded_file($_FILES['imageUpload']['tmp_name'], $uploadFile);
 
@@ -45,7 +47,6 @@ class AdminPartnerController extends AbstractController
                 header('Location:/partners/show?id=' . $id);
                 return '';
             }
-
         }
         return $this->twig->render('Admin/Partner/add.html.twig', ['errors' => $errors]);
     }
