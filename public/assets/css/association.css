@@ -59,7 +59,7 @@
     margin-block-start: var(--spacing-l);
     margin-block-end: var(--spacing-l);
 }
-.container p:last-child {
+.last_paragraph {
     font-weight: bold;
     text-align: center;
     font-size: calc(var(--font-size) * 1.5);
