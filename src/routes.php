@@ -14,4 +14,5 @@ return [
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'journaux' => ['NewspaperController', 'index'],
+    'admin/partenaires/ajouter' => ['AdminPartnerController', 'add'],
 ];
