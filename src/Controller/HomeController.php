@@ -16,6 +16,10 @@ class HomeController extends AbstractController
         $article = $actualityManager->selectAll('date', 'DESC');
         $partnerManager = new PartnerManager();
         $partners = $partnerManager->selectAll();
-        return $this->twig->render('Home/index.html.twig', ['partners' => $partners, 'actuality' => $article, 'newspapers' => $newspapers,]);
+        return $this->twig->render('Home/index.html.twig', [
+            'partners' => $partners,
+            'actuality' => $article,
+            'newspapers' => $newspapers,
+        ]);
     }
 }
