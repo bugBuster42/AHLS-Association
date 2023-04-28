@@ -6,10 +6,10 @@
 db.php
 .idea
 .vscode
-<<<<<<< HEAD
 ahls.db
 /.tours/
 $myConnection.session.sql
-=======
 .DS_Store
->>>>>>> 4bb19c163fb402913ef539a47a99397d1b68d83f
+ahls.db
+/.tours/
+$myConnection.session.sql

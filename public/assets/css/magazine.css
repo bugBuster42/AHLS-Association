@@ -9,7 +9,7 @@ main {
 section {
     display: flex;
     justify-content: center;
-    gap: calc(var(--spacing) * 1);
+    /*gap: calc(var(--spacing) * 1);*/
     margin-block-end: 0;
 }
 
