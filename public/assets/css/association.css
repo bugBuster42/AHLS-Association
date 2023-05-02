@@ -65,6 +65,7 @@
     font-size: calc(var(--font-size) * 1.5);
     margin-block-start: var(--spacing-l);
 }
+
 .container p {
     font-size: clamp(1rem, 2vw, 1.25rem);
 }
