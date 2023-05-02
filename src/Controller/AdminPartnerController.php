@@ -20,7 +20,6 @@ class AdminPartnerController extends AbstractController
                 $errors[] = "Veuillez entrer une adresse";
             }
 
-            // TODO validations (length, format...)
             $uploadDir = __DIR__ . '/../../public/uploads/';
             $uploadFile = $uploadDir . basename($_FILES['imageUpload']['name']);
             $extension = pathinfo($_FILES['imageUpload']['name'], PATHINFO_EXTENSION);
