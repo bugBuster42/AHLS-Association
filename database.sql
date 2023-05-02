@@ -197,6 +197,11 @@ UPDATE newspaper
     link = 'https://ahls-indien.fr/Indien/Indien_137-Mars_2023.pdf'
     WHERE number = 137;
 
+UPDATE newspaper
+    SET cover = 'cover136_placeholder.png',
+    link = 'https://ahls-indien.fr/Indien/Indien_136-Novembre_2022.pdf'
+    WHERE number = 136;
+
 CREATE TABLE
     `partner` (
         `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,

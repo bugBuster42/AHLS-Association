@@ -10,7 +10,7 @@ class NewspaperManager extends AbstractManager
 
     public function showLastByNumber(): array
     {
-        $query = "SELECT cover, date, link, MAX(number) FROM " . static::TABLE;
+        $query = "SELECT * FROM " . static::TABLE . " ORDER BY number DESC LIMIT 2";
         return $this->pdo->query($query)->fetchAll();
     }
 }
