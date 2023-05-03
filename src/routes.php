@@ -13,6 +13,9 @@ return [
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
+    'association' => ['AssociationController', 'index',],
+    'admin/association' => ['AdminAssociationController', 'index',],
     'journaux' => ['NewspaperController', 'index'],
     'admin/partenaires/ajouter' => ['AdminPartnerController', 'add'],
+    'contact' => ['ContactController', 'index'],
 ];
