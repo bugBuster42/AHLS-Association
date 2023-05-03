@@ -19,4 +19,5 @@ return [
     'admin/partenaires/ajouter' => ['AdminPartnerController', 'add'],
     'contact' => ['ContactController', 'index'],
     'admin/journaux' => ['AdminNewspaperController', 'index'],
+    'admin/journaux/ajouter' => ['AdminNewspaperController', 'add'],
 ];
