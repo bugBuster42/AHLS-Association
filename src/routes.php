@@ -15,6 +15,7 @@ return [
     'items/delete' => ['ItemController', 'delete',],
     'association' => ['AssociationController', 'index',],
     'admin/association' => ['AdminAssociationController', 'index',],
+    'admin/association/ajouter' => ['AdminAssociationController', 'create',],
     'journaux' => ['NewspaperController', 'index'],
     'admin/partenaires/ajouter' => ['AdminPartnerController', 'add'],
     'contact' => ['ContactController', 'index'],
