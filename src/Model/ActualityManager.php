@@ -3,7 +3,6 @@
 namespace App\Model;
 
 use App\Model\AbstractManager;
-use PDO;
 
 class ActualityManager extends AbstractManager
 {
