@@ -18,7 +18,7 @@ class AdminAssociationController extends AbstractController
 
     private function validate(array $boardMember): array
     {
-
+        $errors = [];
 
         if (empty($boardMember['lastname'])) {
             $errors[] = 'Le champ nom est obligatoire';
@@ -40,7 +40,7 @@ class AdminAssociationController extends AbstractController
             $errors[] = 'Le champ statut doit faire moins de ' . $maxLength . ' caractères';
         }
 
-        return $errors ?? [];
+        return $errors;
     }
 
 
