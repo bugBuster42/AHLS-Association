@@ -1,5 +1,18 @@
 {% extends 'layout.html.twig' %}
-
+{% set month_translantion = {
+    "January": "Janvier",
+    "Januarya": "Janvier",
+    "March": "Mars",
+    "Januaryc": "Janvier",
+    "Januaryd": "Janvier",
+    "Januaryf": "Janvier",
+    "Januarye": "Janvier",
+    "Januaryr": "Janvier",
+    "Januaryz": "Janvier",
+    "Januaryo": "Janvier",
+    "Januaryu": "Janvier",
+    "Januaryi": "Janvier",
+ } %}
 {% block stylesheet %}
     <link rel="stylesheet" href="/assets/css/admin.css">
 {% endblock %}
@@ -21,7 +34,7 @@
                 {% for newspaper in newspapers %}
                     <tr>
                         <td>{{ newspaper.number }}</td>
-                        <td>{{ newspaper.date }}</td>
+                        <td>{{ newspaper.date|date("m-Y") }}</td>
                         <td>{{ newspaper.cover }}</td>
                         <td>{{ newspaper.link }}</td>
                     </tr>
