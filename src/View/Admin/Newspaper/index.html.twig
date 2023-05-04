@@ -15,6 +15,7 @@
                     <th>Date</th>
                     <th>Couverture</th>
                     <th>Lien</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -24,6 +25,13 @@
                         <td>{{ newspaper.date|date("m-Y") }}</td>
                         <td>{{ newspaper.cover }}</td>
                         <td>{{ newspaper.link }}</td>
+                        <td class="buttons">
+                            <div class="icons">
+                                <a href="/admin/journaux/modifier?id={{ newspaper.id }}">
+                                    <img src="/assets/images/edit.svg" alt="modifier" width="50px">
+                                </a>
+                            </div>
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>
