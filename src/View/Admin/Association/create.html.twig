@@ -16,13 +16,13 @@
 		</ul>
 		<form action="" method="POST">
 			<label for="lastname">Nom</label>
-			<input type="text" id="lastname" name="lastname" required value="{{boardMember.lastname}}">
+			<input type="text" id="lastname" name="lastname" required maxlength="255" value="{{boardMember.lastname}}">
 
 			<label for="firstname">Prénom</label>
-			<input type="text" id="firstname" name="firstname" required value="{{boardMember.firstname}}">
+			<input type="text" id="firstname" name="firstname" required maxlength="255" value="{{boardMember.firstname}}">
 
 			<label for="job">Statut</label>
-			<input type="text" id="job" name="job" required value="{{boardMember.job}}">
+			<input type="text" id="job" name="job" required maxlength="255" value="{{boardMember.job}}">
 
 			<button>Ajouter</button>
 		</form>
