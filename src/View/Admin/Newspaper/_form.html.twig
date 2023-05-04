@@ -16,7 +16,7 @@
     <input type="file" id="cover" name="cover" value="{{ newspaper.cover }}">
 
     <label for="link">Lien</label>
-    <input type="text" id="link" name="link" value="{{ newspaper.link }}" required>
+    <input type="url" id="link" name="link" value="{{ newspaper.link }}" required>
 
     <button>{{ buttonName|default('Ajouter') }}</button>
 </form>
