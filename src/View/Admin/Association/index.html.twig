@@ -20,9 +20,12 @@
 			<tbody>
 				{% for boardMember in boardMembers %}
 					<tr>
-						<td>{{ boardMember.lastname}}</td>
-						<td>{{ boardMember.firstname}}</td>
-						<td>{{ boardMember.job}}</td>
+						<td>{{ boardMember.lastname }}</td>
+						<td>{{ boardMember.firstname }}</td>
+						<td>{{ boardMember.job }}</td>
+						<td>
+							<a href="/admin/association/modifier?id={{ boardMember.id }}">Modifier</a>
+						</td>
 					</tr>
 				{% endfor %}
 			</tbody>
