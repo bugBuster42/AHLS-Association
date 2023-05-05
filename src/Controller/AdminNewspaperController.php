@@ -56,4 +56,30 @@ class AdminNewspaperController extends AbstractController
             'newspaper' => $newspaper,
         ]);
     }
+
+    public function edit(int $id): string
+    {
+        $newspaperManager = new NewspaperManager();
+        $newspaper = $newspaperManager->selectOneById($id);
+
+        $errors = [];
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $newspaper = array_map('trim', $_POST);
+
+            $errors = $this->validate($newspaper);
+
+            if (empty($errors)) {
+                $newspaperManager = new NewspaperManager();
+                $newspaper['id'] = $id;
+                $newspaperManager->update($newspaper);
+
+                header('Location: /admin/journaux');
+            }
+        }
+        return $this->twig->render('Admin/Newspaper/edit.html.twig', [
+            'errors' => $errors,
+            'newspaper' => $newspaper,
+        ]);
+    }
 }

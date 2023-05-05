@@ -22,4 +22,5 @@ return [
     'contact' => ['ContactController', 'index'],
     'admin/journaux' => ['AdminNewspaperController', 'index'],
     'admin/journaux/ajouter' => ['AdminNewspaperController', 'add'],
+    'admin/journaux/modifier' => ['AdminNewspaperController', 'edit', ['id']],
 ];
