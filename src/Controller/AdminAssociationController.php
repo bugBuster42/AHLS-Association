@@ -90,4 +90,15 @@ class AdminAssociationController extends AbstractController
             'errors' => $errors, 'boardMember' => $boardMember,
         ]);
     }
+
+
+    public function delete(int $id): void
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $boardMemberManager = new BoardMemberManager();
+            $boardMemberManager->delete($id);
+
+            header('Location: /admin/association');
+        }
+    }
 }
