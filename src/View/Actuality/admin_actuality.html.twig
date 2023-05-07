@@ -1,16 +1,39 @@
 {% extends 'layout.html.twig' %}
 
-{% block stylesheet %}{% endblock %}
+{% block stylesheet %}
+	{{ parent() }}
+	<link rel="stylesheet" href="/assets/css/admin/addActuality.css">
+{% endblock %}
+
+{% block title %}
+	{{ parent() }}
+	- Admin - Gestion des actualités
+{% endblock %}
+
+{% block navbar %}{% endblock %}
+
 {% block content %}
-	<h1>Admin - Gestion des actualités</h1>
-	<a href="">Ajouter un article</a>
-	<div>
-		{% for copy in article %}
-			<ul>
-				<li>{{ copy.title }}</li>
-				<a href="">Modifier</a>
-				<a href="">Supprimer</a>
-			</ul>
-		{% endfor %}
-	</div>
+	<main class="container">
+		<h1>Admin - Gestion des actualités</h1>
+		<a role="button" href="admin_actuality/add">Ajouter un article</a>
+		<div class="list">
+			<table>
+				<tbody>
+					{% for copy in article %}
+						<tr>
+							<td>
+								<ul>
+									<li>
+										<b>{{ copy.title }}</b><br>Publié le
+										{{ copy.date }}<br>{{ copy.content }}</li>
+									<a role="button" href="">Modifier</a>
+									<a role="button" href="">Supprimer</a>
+								</ul>
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</main>
 {% endblock %}

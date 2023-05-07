@@ -17,4 +17,5 @@ return [
 
     'journaux' => ['NewspaperController', 'index'],
     'admin_actuality' => ['AdminActualityController', 'index',],
+    'admin_actuality/add' => ['AdminActualityController', 'create',],
 ];
