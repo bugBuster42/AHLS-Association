@@ -22,7 +22,8 @@ class ActualityManager extends AbstractManager
 
     public function insert(array $article): int
     {
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`title`, `content`, `date`) VALUES (:title, :content, :date)");
+        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`title`, `content`, `date`) 
+        VALUES (:title, :content, :date)");
         $statement->bindValue('title', $article['title'], PDO::PARAM_STR);
         $statement->bindValue('content', $article['content'], PDO::PARAM_STR);
         $statement->bindValue('date', $article['date'], PDO::PARAM_STR);
