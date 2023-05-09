@@ -13,7 +13,7 @@ class NewspaperManager extends AbstractManager
         $query = "SELECT * FROM " . static::TABLE . " ORDER BY number DESC LIMIT 2";
         return $this->pdo->query($query)->fetchAll();
     }
-    
+
     public function insert(array $newspaper): void
     {
         $statement = $this->pdo->prepare(
