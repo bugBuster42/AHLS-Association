@@ -14,6 +14,7 @@ return [
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'association' => ['AssociationController', 'index',],
+    'admin' => ['AdminHomePageController', 'index'],
     'admin/association' => ['AdminAssociationController', 'index',],
     'admin/association/ajouter' => ['AdminAssociationController', 'create',],
     'admin/association/modifier' => ['AdminAssociationController', 'update', ['id']],
