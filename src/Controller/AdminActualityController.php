@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Controller\AbstractController;
 use App\Model\ActualityManager;
+use Datetime;
 
 class AdminActualityController extends AbstractController
 {
@@ -29,7 +30,12 @@ class AdminActualityController extends AbstractController
         }
 
         if (empty($article['date'])) {
-            $errors[] = 'Veuillez spécifier une date.';
+            $errors[] = 'Veuillez spécifier une date valide.';
+        }
+
+        $date = new Datetime($article['date']);
+        if (!empty($date->getLastErrors())) {
+            $errors[] = 'Le format de date est incorrect.';
         }
 
         if (empty($article['content'])) {

@@ -57,7 +57,8 @@ CREATE TABLE `actuality` (
   `id` int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `date` datetime NOT NULL,
   `title` varchar(255) NOT NULL,
-  `content` text
+  `content` text,
+  `url` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
 
@@ -69,10 +70,10 @@ INSERT INTO `item` (`id`, `title`) VALUES
 (1, 'Stuff'),
 (2, 'Doodads');
 
-INSERT INTO `actuality` (`date`, `title`, `content`) VALUES
-('2023-04-18 06:00', 'Des diplômés de licence et de master célébrés à l’université', 'Cent quatre-vingts lauréats, de la licence au doctorat, ont reçu leur diplôme à la faculté de droit économie gestion de l’université d’Orléans. Sandra Rimbert, enseignant...'),
-('2023-04-17 06:00', 'Une élue européenne en visite', 'Salima Yenbou est allée à la rencontre des élèves du lycée Voltaire pour faire mieux connaître le Parlement européen et le rôle de l’Europe. - Salima Yenbou, députée européenne (...'),
-('2023-04-17 06:00', 'Des écoliers préparent une pièce sur Jeanne d’Arc', 'Les élèves de CM1 et CM2 de l’école privée du cours Henri-Guillaumet (membre du réseau Espérance banlieue) répètent une pièce de théâtre sur Jeanne d’Arc, qui sera présent...');
+INSERT INTO `actuality` (`date`, `title`, `content`, `url`) VALUES
+('2023-04-18 06:00', 'Des diplômés de licence et de master célébrés à l’université', 'Cent quatre-vingts lauréats, de la licence au doctorat, ont reçu leur diplôme à la faculté de droit économie gestion de l’université d’Orléans. Sandra Rimbert, enseignant...', 'https://www.larep.fr/orleans-45000/actualites/des-diplomes-de-licence-et-de-master-celebres-a-luniversite_14296054/'),
+('2023-04-17 06:00', 'Une élue européenne en visite', 'Salima Yenbou est allée à la rencontre des élèves du lycée Voltaire pour faire mieux connaître le Parlement européen et le rôle de l’Europe. - Salima Yenbou, députée européenne (...', 'https://www.larep.fr/orleans-45000/actualites/une-elue-europeenne-en-visite_14295526/'),
+('2023-04-17 06:00', 'Des écoliers préparent une pièce sur Jeanne d’Arc', 'Les élèves de CM1 et CM2 de l’école privée du cours Henri-Guillaumet (membre du réseau Espérance banlieue) répètent une pièce de théâtre sur Jeanne d’Arc, qui sera présent...', 'https://www.larep.fr/orleans-45000/actualites/des-ecoliers-preparent-une-piece-sur-jeanne-darc_14295527/');
 
 --
 
