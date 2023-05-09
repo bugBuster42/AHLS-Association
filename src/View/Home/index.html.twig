@@ -27,40 +27,42 @@
 						</a>
 					{% endfor %}
 					<a class="show_more_news" href="">Consulter la rubrique actualités ➔</a>
-				</article>
-			</section>
-
-			<section>
-				<article>
-					<div class="magazine">
-						<h2>L'INDIEN</h2>
-						<img src="assets/images/vector.png" class="decoration">
-						{% for newspaper in newspapers %}
-							<div class="cover">
-								<h3>{{ newspaper.date }}</h3>
-								<a href={{ newspaper.link }}>
-									<img src={{ "assets/images/" ~ newspaper.cover }}>
-									<p class="number">{{ newspaper.number }}
-										<b>Lire la suite</b>
-									</p>
-								</div>
-							</div>
-						</a>
-					{% endfor %}
-					<a class="show_more_newspapers" href="">Consulter les anciens numéros ➔</a>
-				</article>
-			</section>
+				</div>
+			</article>
 		</section>
-		<section class="partners">
-			<h1>Nos partenaires</h1>
-			<ul>
-				{% for partner in partners %}
-					<li>
-						<h2>
-							{{partner.name}}
-						</h2>
-						<img src="https://nzentrepreneur.co.nz/wp-content/uploads/2022/08/Partner-Logo-placeholder-300x157.png" alt="{{ partner.name }}">
-					</li>
+
+		<section>
+			<article>
+				<div class="magazine">
+					<h2>L'INDIEN</h2>
+					<img src="assets/images/vector.png" class="decoration">
+					{% for newspaper in newspapers %}
+						<div class="cover">
+							<h3>{{ newspaper.date }}</h3>
+							<a href={{ newspaper.link }}>
+								<img src={{ "assets/images/" ~ newspaper.cover }}>
+								<p class="number">{{ newspaper.number }}
+									<b>Lire la suite</b>
+								</p>
+							</div>
+						</div>
+					</a>
 				{% endfor %}
-			</section>
-		{% endblock %}
+				<a class="show_more_newspapers" href="">Consulter les anciens numéros ➔</a>
+			</article>
+		</section>
+	</section>
+	<section class="partners">
+		<h1>Nos partenaires</h1>
+		<ul>
+			{% for partner in partners %}
+				<li>
+					<h2>
+						{{partner.name}}
+					</h2>
+					<img src="https://nzentrepreneur.co.nz/wp-content/uploads/2022/08/Partner-Logo-placeholder-300x157.png" alt="{{ partner.name }}">
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+{% endblock %}
