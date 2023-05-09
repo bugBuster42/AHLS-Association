@@ -27,4 +27,6 @@ return [
     'admin/journaux/ajouter' => ['AdminNewspaperController', 'add'],
     'admin/journaux/modifier' => ['AdminNewspaperController', 'edit', ['id']],
     'admin/journaux/supprimer' => ['AdminNewspaperController', 'delete', ['id']],
+    'admin/actualites' => ['AdminActualityController', 'index',],
+    'admin/actualites/ajouter' => ['AdminActualityController', 'create',],
 ];
