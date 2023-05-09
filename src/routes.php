@@ -18,6 +18,7 @@ return [
     'admin/association/ajouter' => ['AdminAssociationController', 'create',],
     'admin/association/modifier' => ['AdminAssociationController', 'update', ['id']],
     'admin/association/supprimer' => ['AdminAssociationController', 'delete', ['id']],
+    'mention' => ['LegalNoticeController', 'index',],
     'journaux' => ['NewspaperController', 'index'],
     'admin/partenaires/ajouter' => ['AdminPartnerController', 'add'],
     'contact' => ['ContactController', 'index'],
