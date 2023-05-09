@@ -1,14 +1,13 @@
-{% extends 'layout.html.twig' %}
+{% extends 'adminLayout.html.twig' %}
 
 {% block stylesheet %}
 {{ parent() }}
-	<link rel="stylesheet" href="/assets/css/admin/addActuality.css">
+	<link rel="stylesheet" href="/assets/css/admin.css">
 {% endblock %}
 
 {% block title %}
 {{ parent() }} - Admin - Ajouter un article
 {% endblock %}
-{% block navbar %}{% endblock %}
 {% block content %}
 <main class="container">
 <h1>Admin - Ajouter un article</h1>
@@ -27,7 +26,6 @@
 		<textarea value="{{ article.content }}" name="content" id="content"></textarea>
 		<button>Soumettre</button>
 	</form>
-	<a class="back" href="/admin_actuality">Retour</a>
+	<a class="back" href="/admin/actualites">Retour</a>
 </main>
 {% endblock %}
-{% block footer %}{% endblock %}
