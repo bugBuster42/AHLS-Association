@@ -1,8 +1,9 @@
 {% extends 'adminLayout.html.twig' %}
 
 {% block stylesheet %}
-{{ parent() }}
+{{ parent () }}
 	<link rel="stylesheet" href="/assets/css/admin.css">
+	<link rel="stylesheet" href="/assets/css/admin/addActuality.css">
 {% endblock %}
 
 {% block title %}
@@ -23,7 +24,7 @@
 		<label for="date">Date</label>
 		<input type="datetime-local" value="{{ article.date }}" name="date" id="date">
 		<label for="content">Contenu</label>
-		<textarea value="{{ article.content }}" name="content" id="content"></textarea>
+		<textarea class="textarea" value="{{ article.content }}" name="content" id="content"></textarea>
 		<button>Soumettre</button>
 	</form>
 	<a class="back" href="/admin/actualites">Retour</a>

@@ -2,10 +2,19 @@ h1 {
     margin-top : var(--spacing);
     text-align: center;
     margin-bottom : 2rem;
+    color: var(--light-color);
 }
-
+ul {
+    color: var(--dark-color);
+}
 ul {
     padding-inline: 3rem;
+}
+label {
+    color: var(--light-color);
+}
+body {
+    background-color: var(--dark-color);
 }
 
 .list {
@@ -17,13 +26,20 @@ ul {
 }
 
 button {
-    width: 20%;
+    width: clamp(130px, 20%, 230px);
     margin-block-end: 3rem;
 }
 
 form {
     width : 90%;
     margin : auto;
+}
+input, .textarea {
+    color: var(--dark-color);
+    background-color : var(--light-color);
+}
+.textarea {
+    border : 1px solid var(--primary-color);
 }
 
 ul a {
