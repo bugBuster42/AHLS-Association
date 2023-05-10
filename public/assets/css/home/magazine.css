@@ -76,17 +76,12 @@ a:-webkit-any-link {
     height: 90%;
     padding-block-start: 0.5rem;
     padding-block-end: var(--spacing);
-    transition: 500ms;
 }
 
 .number {
     display: block;
     padding-block-end: -2rem;
     text-align: center;
-}
-
-.cover img:hover {
-    height: 93%;
 }
 
 .show_more_newspapers {
