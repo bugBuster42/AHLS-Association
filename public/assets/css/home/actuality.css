@@ -82,8 +82,9 @@ p {
     color: var(--dark-color);
 }
 
-a:-webkit-any-link {
+.feed a:-webkit-any-link {
     text-decoration: none;
+    color: var(--primary-color);
 }
 
 .show_more_news {
