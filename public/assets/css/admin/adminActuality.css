@@ -19,11 +19,15 @@ body {
 }
 h3 {
     font-family: var(--text-font);
+    font-size: clamp(1.5rem, 2vw, 2rem);
     color: var(--light-color);
 }
-
-ul {
-    
+.article b:first-child {
+    color: var(--primary-color);
+}
+td {
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
 }
 
 .article {
@@ -53,6 +57,9 @@ ul {
 
 [role="button"]:hover {
     color: var(--dark-color);
+}
+.backToSite {
+    color: var(--primary-color);
 }
 
 nav ul li:last-child a {
