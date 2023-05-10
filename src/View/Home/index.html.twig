@@ -54,15 +54,15 @@
 	</section>
 	<section class="partners">
 		<h1>Nos partenaires</h1>
-		<ul>
+		<div class="partners-grid">
 			{% for partner in partners %}
-				<li>
+				<article class="partner">
 					<h2>
-						{{partner.name}}
+						{{ partner.name }}
 					</h2>
 					<img src="https://nzentrepreneur.co.nz/wp-content/uploads/2022/08/Partner-Logo-placeholder-300x157.png" alt="{{ partner.name }}">
-				</li>
+				</article>
 			{% endfor %}
-		</ul>
+			</div>
 	</section>
 {% endblock %}
