@@ -16,7 +16,7 @@
 					<h2>DERNIÈRES ACTUALITÉS</h2>
 					<img src="assets/images/vector.png" class="decoration">
 					{% for article in actuality %}
-						<a href="">
+						<a target="_blank" href="{{ article.url }}">
 							<div class="article">
 								<h3>{{ article.title }}</h3>
 								<p class="article_date">{{ article.date }}</p>
@@ -54,15 +54,15 @@
 	</section>
 	<section class="partners">
 		<h1>Nos partenaires</h1>
-		<ul>
+		<div class="partners-grid">
 			{% for partner in partners %}
-				<li>
+				<article class="partner">
 					<h2>
-						{{partner.name}}
+						{{ partner.name }}
 					</h2>
 					<img src="https://nzentrepreneur.co.nz/wp-content/uploads/2022/08/Partner-Logo-placeholder-300x157.png" alt="{{ partner.name }}">
-				</li>
+				</article>
 			{% endfor %}
-		</ul>
+			</div>
 	</section>
 {% endblock %}
