@@ -21,7 +21,7 @@ h2 {
     font-family: var(--title-font);
     text-align: center;
     margin: 0;
-    font-size: clamp(2rem, 1.5rem + 1.9vw, 3rem);
+    font-size: clamp(1.5rem, 1.2rem + 1.1vw, 2.1rem);
     padding-block-end: 1rem;
 }
 
@@ -76,17 +76,12 @@ a:-webkit-any-link {
     height: 90%;
     padding-block-start: 0.5rem;
     padding-block-end: var(--spacing);
-    transition: 500ms;
 }
 
 .number {
     display: block;
     padding-block-end: -2rem;
     text-align: center;
-}
-
-.cover img:hover {
-    height: 93%;
 }
 
 .show_more_newspapers {
