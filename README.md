@@ -1,18 +1,18 @@
 # Simple MVC
 
-## Description
-
-This repository is a simple PHP MVC structure from scratch.
-
-It uses some cool vendors/libraries such as Twig and Grumphp.
-For this one, just a simple example where users can choose one of their databases and see tables in it.
-
 ## Steps
 
-1. Clone the repo from Github.
-2. Run `composer install`.
-3. Create _config/db.php_ from _config/db.php.dist_ file and add your DB parameters. Don't delete the _.dist_ file, it must be kept.
+1. **Clone the repo from Github.**
+git clone https://github.com/bugBuster42/AHLS-Association.git
 
+
+2. **Run composer install.**
+Navigate to the cloned repository directory and run:
+composer install
+
+
+3. **Create _config/db.php_ from _config/db.php.dist_ file and add your DB parameters.** Don't delete the _.dist_ file, it must be kept.
+In `db.php`, set your database parameters:
 ```php
 define('APP_DB_HOST', 'your_db_host');
 define('APP_DB_NAME', 'your_db_name');
@@ -20,10 +20,23 @@ define('APP_DB_USER', 'your_db_user_wich_is_not_root');
 define('APP_DB_PASSWORD', 'your_db_password');
 ```
 
-4. Import _database.sql_ in your SQL server, you can do it manually or use the _migration.php_ script which will import a _database.sql_ file.
-5. Run the internal PHP webserver with `php -S localhost:8000 -t public/`. The option `-t` with `public` as parameter means your localhost will target the `/public` folder.
-6. Go to `localhost:8000` with your favorite browser.
-7. From this starter kit, create your own web application.
+4. **Import _database.sql_ in your SQL server,**
+First, create a new MySQL database named as per your db.php configuration.
+Then, import the database.sql file. This can be done in two ways:
+    - Manually using MySQL command line:
+      mysql -u your_db_user -p your_db_name < path/to/database.sql
+      Replace your_db_user, your_db_name, and path/to/database.sql with your actual database username, the database name you created
+    - Using the migration.php script:
+      Run the script from your project root to import the database.sql file:
+      php migration.php
+
+
+5. **Run the internal PHP webserver with:**
+php -S localhost:8000 -t public/
+The option -t with public as parameter means your localhost will target the /public folder.
+
+6. **Go to localhost:8000 with your favorite browser.**
+
 
 ### Windows Users
 
