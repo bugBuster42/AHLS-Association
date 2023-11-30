@@ -70,7 +70,7 @@ To set up the database for the project, follow these steps
     define('APP_DB_NAME', 'database_name');
 
     ```
-  - Replace `localhost`, `database_name`, `user`, and `password` with your actual database host, name, username, and password.
+  - Replace  `user`, `password`, `localhost` and `database_name` with your actual username, password, host and db-name.
 
 - **Import `database.sql` in Your SQL Server**
   - First, create a new MySQL database named as per your `db.php` configuration.
