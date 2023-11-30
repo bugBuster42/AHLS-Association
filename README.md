@@ -1,20 +1,27 @@
-# Simple MVC
+# AHLS association Project
+
+## Description
+This project involved revamping the outdated website of the AHLS Neighborhood Association. The focus was on creating a modern, informative website to better serve the community and enhance the association's online presence.
+
+## Getting Started
+
+These instructions will guide you on how to get a copy of the project up and running on your local machine for development and testing purposes.
 
 ## Steps
 
-1. **Clone the repo from Github.**
+1. **Clone the repository**
     ```
     git clone https://github.com/bugBuster42/AHLS-Association.git
     ```
 
-3. **Run composer install.**
+2. **Run composer install.**
    
     Navigate to the cloned repository directory and run
    
     `composer install`
 
 
-5. **Create _config/db.php_ from _config/db.php.dist_ file and add your DB parameters.**
+3. **Create _config/db.php_ from _config/db.php.dist_ file and add your DB parameters.**
     Don't delete the _.dist_ file, it must be kept.
 
     In `db.php`, set your database parameters:
@@ -25,7 +32,7 @@
     define('APP_DB_PASSWORD', 'your_db_password');
     ```
 
-6. **Import _database.sql_ in your SQL server,**
+4. **Import _database.sql_ in your SQL server,**
    
     First, create a new MySQL database named as per your db.php configuration.
     Then, import the database.sql file. This can be done in two ways:
@@ -37,13 +44,13 @@
       `php migration.php`
 
 
-8. **Run the internal PHP webserver with:**
+5. **Run the internal PHP webserver with:**
    
     `php -S localhost:8000 -t public/`
    
     The option -t with public as parameter means your localhost will target the /public folder.
 
-10. `Go to localhost:8000` with your favorite browser.
+6. `Go to localhost:8000` with your favorite browser.
 
 
 ## Windows Users  
