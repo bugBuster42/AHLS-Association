@@ -7,6 +7,11 @@ This project involved revamping the outdated website of the AHLS Neighborhood As
 
 These instructions will guide you on how to get a copy of the project up and running on your local machine for development and testing purposes.
 
+### Prerequisites
+- PHP 7.4 or higher
+- MySQL
+- Composer
+
 ## Steps
 
 1. **Clone the repository**
@@ -14,7 +19,7 @@ These instructions will guide you on how to get a copy of the project up and run
     git clone https://github.com/bugBuster42/AHLS-Association.git
     ```
 
-2. **Run composer install**
+2. **Install PHP Dependencies**
    
     Navigate to the cloned repository directory and run
     ```
@@ -22,48 +27,48 @@ These instructions will guide you on how to get a copy of the project up and run
     ```
 
 
-3. **Create _config/db.php_ from _config/db.php.dist_ file and add your DB parameters**
-   
-    Don't delete the _.dist_ file, it must be kept.
+3. **Database Configuration**
 
-    In `db.php`, set your database parameters:
-    ```php
+- **Create config/db.php from config/db.php.dist File**
+  - Copy `config/db.php.dist` to `config/db.php`.
+  - In `db.php`, set your database parameters:
+    ```
     define('APP_DB_HOST', 'your_db_host');
     define('APP_DB_NAME', 'your_db_name');
-    define('APP_DB_USER', 'your_db_user_wich_is_not_root');
+    define('APP_DB_USER', 'your_db_user');
     define('APP_DB_PASSWORD', 'your_db_password');
     ```
+  - Replace `your_db_host`, `your_db_name`, `your_db_user`, and `your_db_password` with your actual database host, name, username, and password.
 
-4. **Import _database.sql_ in your SQL server**
-   
-    First, create a new MySQL database named as per your db.php configuration.
-    Then, import the database.sql file. This can be done in two ways:
-    - Manually using MySQL command line:
-      `mysql -u your_db_user -p your_db_name < path/to/database.sql`
-      Replace your_db_user, your_db_name, and path/to/database.sql with your actual database username, the database name you created
-    - Using the migration.php script:
-      Run the script from your project root to import the database.sql file:
-      `php migration.php`
+- **Import `database.sql` in Your SQL Server**
+  - First, create a new MySQL database named as per your `db.php` configuration.
+  - Then, import the `database.sql` file. This can be done in two ways:
+    - **Manually using MySQL Command Line**:
+      ```
+      mysql -u your_db_user -p your_db_name < path/to/database.sql
+      ```
+    - **Using the `migration.php` Script**:
+      ```
+      php migration.php
+      ```
 
+4. **Run the Application**
+- Start the internal PHP webserver with:
+  ```
+  php -S localhost:8000 -t public/
+  ```
+- The option `-t public` means your localhost will target the `/public` folder.
 
-5. **Run the internal PHP webserver with**
-   
-    ```
-   php -S localhost:8000 -t public/
-    ```
-   
-    The option -t with public as parameter means your localhost will target the /public folder.
-
-6. **Go to**
-   ```
-   localhost:8000
-   ```
-   with your favorite browser.
+5. **Access the Application**
+- Open `localhost:8000` in your browser.
 
 
-## Windows Users  
+## Additional Notes
 
-If you develop on Windows, you should edit you git configuration to change your end of line rules with this command :
+
+### Windows Users  
+
+- If you develop on Windows, you should edit you git configuration to change your end of line rules with this command :
 
 ```
 git config --global core.autocrlf true
@@ -71,13 +76,10 @@ git config --global core.autocrlf true
 
 
 
-## Run it on docker
+### Docker
 
-If you don't know what is docker, skip this chapter. ;)
-
-Otherwise, you probably see, this project is ready to use with docker.
-
-To build the image, go into the project directory and in your CLI type:
+- If you want to run the project using Docker, follow these steps:
+- To build the image, go into the project directory and in your CLI type:
 
 ```
 docker build -t simple-mvc-container .
