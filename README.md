@@ -23,7 +23,7 @@ These instructions will guide you on how to get a copy of the project up and run
    
     Navigate to the cloned repository directory:
     ```
-    cd Make-Sense-Association
+    cd AHLS-Association
     ```
     and run:
     ```
