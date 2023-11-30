@@ -21,15 +21,46 @@ These instructions will guide you on how to get a copy of the project up and run
 
 2. **Install PHP Dependencies**
    
-    Navigate to the cloned repository directory and run
+    Navigate to the cloned repository directory:
+    ```
+    cd Make-Sense-Association
+    ```
+    and run:
     ```
     composer install
     ```
 
 
 3. **Database Configuration**
+To set up the database for the project, follow these steps
 
-- **Create config/db.php from config/db.php.dist File**
+    **Create a MySQL Database :**
+   
+   First, create a new MySQL database for the project. You can name it as you like, for example, `ahls_db`
+  
+     **Open your Terminal :**
+   
+   Type the following command
+   ```
+    mysql -u root -p
+   ```
+   
+     You will be prompted to enter the password for the MySQL `root` user.
+    Enter it, and press Enter.
+       
+     **Create the Database :**
+   
+     Once connected to MySQL, create the database by executing
+   ```
+   CREATE DATABASE ahls_db;
+   ```
+     **Exit MySQL :**
+   
+     To leave the MySQL interface, type
+   ```
+   exit;
+    ```
+- **Configure Database Credentials**
   - Copy `config/db.php.dist` to `config/db.php`.
   - In `db.php`, set your database parameters:
     ```
@@ -63,30 +94,4 @@ These instructions will guide you on how to get a copy of the project up and run
 - Open `localhost:8000` in your browser.
 
 
-## Additional Notes
 
-
-### Windows Users  
-
-- If you develop on Windows, you should edit you git configuration to change your end of line rules with this command :
-
-```
-git config --global core.autocrlf true
-```
-
-
-
-### Docker
-
-- If you want to run the project using Docker, follow these steps:
-- To build the image, go into the project directory and in your CLI type:
-
-```
-docker build -t simple-mvc-container .
-```
-
-then, run it to open it on your localhot :
-
-```
-docker run -i -t --name simple-mvc  -p 80:80 simple-mvc-container
-```
