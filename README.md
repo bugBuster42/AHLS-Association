@@ -77,7 +77,7 @@ To set up the database for the project, follow these steps
   - Then, import the `database.sql` file. This can be done in two ways:
     - **Manually using MySQL Command Line**:
       ```
-      mysql -u your_db_user -p your_db_name < path/to/database.sql
+      mysql -u your_db_user -p your_db_name < database.sql
       ```
     - **Using the `migration.php` Script**:
       ```
